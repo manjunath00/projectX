@@ -14,7 +14,10 @@ function Form(props) {
       description
     }
 
+    /* OnSubmit from props */
     onSubmit(formResult);
+
+    /* Setting the heading & description to null */
     setHeading('');
     setDescription('');
   }
@@ -62,5 +65,6 @@ function Form(props) {
 export default Form;
 
 Form.defaultProps = {
+  /* Prop for switching New Project & Edit Project */
   isNew: true
 }

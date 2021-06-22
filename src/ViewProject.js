@@ -9,17 +9,20 @@ function ViewProject() {
   const { projectId } = useParams();
   const history = useHistory();
 
+  /* Getting All Projects */
   const ProjectList = useSelector((state) => state.projects);
  
-
+  /* Select One Project */
   const selectedProject = ProjectList.filter(item => item.id === projectId);
 
   const project = selectedProject[0]
  
   const dispatch = useDispatch();
 
+  /* Sending the item to store */
   const onDelete = () => {
     dispatch(deleteProject({ id: projectId}));
+    /* Returning to home page */
     history.push('/')
   }
 
@@ -27,7 +30,7 @@ function ViewProject() {
     <div className='project-page'>
       <div className='flex justify-content title-bar view-page'>
         <span className='heading-primary'>View Project</span>
-        <div className='flex'>
+        <div className='button-group'>
           <button className='button button__secondary'>
             <Link to={`/projects/${projectId}/edit`}>Edit Project</Link>
           </button>
@@ -37,8 +40,8 @@ function ViewProject() {
         </div>
       </div>
 
-      <div className='flex'>
-        <div className='col-4 heading-primary'>
+      <div className='flex project-row'>
+        <div className='col-4 heading-secondary'>
           Project Heading
         </div>
           
@@ -47,8 +50,8 @@ function ViewProject() {
         </div>
       </div>
 
-      <div className='flex'>
-      <div className='col-4 heading-primary'>
+      <div className='flex project-row'>
+      <div className='col-4 heading-secondary'>
             Project description
           </div>
           <div className='col-6'>

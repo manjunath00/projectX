@@ -1,10 +1,10 @@
 import React from "react";
-import { useSelector, useDispatch } from 'react-redux';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
+import { Link } from "react-router-dom";
 
 import "./styles/projectlist.scss";
 
-function ProjectList(props) {
+function ProjectList() {
   const projects = useSelector((state) => state.projects)
   return (
     <div className="project-list">
@@ -28,26 +28,3 @@ function ProjectList(props) {
 }
 
 export default ProjectList;
-
-ProjectList.defaultProps = {
-  projects: [
-    {
-      id: "12",
-      image: "https://source.unsplash.com/random/800x600",
-      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus sed facilisi facilisi nunc aenean. In enim amet arcu sit sed ut. Facilisis at accumsan turpis enim vulputate. Orci amet scelerisque est maecenas amet pulvinar sapien, neque, sit.",
-    },
-    {
-      id: "13",
-      image: "https://source.unsplash.com/random/800x600",
-      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus sed facilisi facilisi nunc aenean. In enim amet arcu sit sed ut. Facilisis at accumsan turpis enim vulputate. Orci amet scelerisque est maecenas amet pulvinar sapien, neque, sit.",
-    },
-    {
-      id: "14",
-      image: "https://source.unsplash.com/random/800x600",
-      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus sed facilisi facilisi nunc aenean. In enim amet arcu sit sed ut. Facilisis at accumsan turpis enim vulputate. Orci amet scelerisque est maecenas amet pulvinar sapien, neque, sit.",
-    },
-  ],
-};
