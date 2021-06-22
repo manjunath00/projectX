@@ -1,0 +1,26 @@
+input, textarea {
+    padding: 5px 10px;
+    font-family: inherit;
+    margin: 0rem 1rem;
+}
+
+.form-group {
+    margin: 1rem 0 1rem;
+
+    @media only screen and (max-width: 1200px) {
+        margin: 0;
+    }
+}
+
+label {
+    font-weight: bold;
+    text-align: right;
+}
+
+textarea {
+    height: 7rem;
+}
+
+.form-cta {
+    margin: 1rem 0;
+}

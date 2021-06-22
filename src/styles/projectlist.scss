@@ -1,0 +1,41 @@
+.project-list {
+  width: 50%;
+  margin: 1rem auto;
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .project {
+    display: flex;
+    justify-content: flex-start;
+    border: 2px solid #c4c4c4;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #dadada;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .project-text {
+    margin-left: 1rem;
+  }
+
+  .project-heading {
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .project-list {
+    width: 95%;
+  }
+}
